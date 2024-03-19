@@ -11,7 +11,7 @@ int main() {
     char buffer[BUFFER_SIZE];
 
     // Open the file in write mode, create it if it doesn't exist, and set permissions
-    fd = open("example.txt", O_CREAT | O_WRONLY | O_TRUNC, 0666);
+    fd = open("sys_call.txt", O_CREAT | O_WRONLY | O_TRUNC, 0666);
     if (fd == -1) {
         perror("open");
         exit(EXIT_FAILURE);
@@ -28,7 +28,7 @@ int main() {
     close(fd);
 
     // Open the file in read mode
-    fd = open("example.txt", O_RDONLY);
+    fd = open("sys_callx.txt", O_RDONLY);
     if (fd == -1) {
         perror("open");
         exit(EXIT_FAILURE);
